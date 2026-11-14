@@ -168,4 +168,39 @@ Gmail API authentication is used for the application's email delivery service. S
 
 For the complete Gmail API setup, OAuth configuration, and testing instructions, refer to:
 
-[Google Gmail OAuth Guide](docs/GOOGLE_GMAIL_OAUTH_GUIDE.md
+[Google Gmail OAuth Guide](docs/GOOGLE_GMAIL_OAUTH_GUIDE.md)
+
+Keep OAuth client secrets and encryption keys inside your local `backend/.env` file. Never upload them to GitHub.
+
+## Building the Frontend
+
+To create a production build, open a terminal in `frontend` and run:
+
+```powershell
+npm run build
+```
+
+The generated files will be available in:
+
+`frontend/dist`
+
+To preview the production build locally:
+
+```powershell
+npm run preview
+```
+
+This project currently uses the Vite development server for the frontend. The production build is not automatically hosted by Flask.
+
+## Project Documentation
+
+Additional guides are available in the `docs` folder:
+
+| Document | Description |
+|---|---|
+| [Installation and Run Guide](docs/INSTALLATION_AND_RUN_GUIDE.md) | Setup instructions and how to run the application |
+| [Manual Update Guide](docs/MANUAL_UPDATE_GUIDE.md) | How to manage data through the application and update the project |
+| [Project Structure](docs/PROJECT_STRUCTURE.md) | Explanation of the project folders and files |
+| [Troubleshooting](docs/TROUBLESHOOTING.md) | Common errors and their solutions |
+| [Google Gmail OAuth Guide](docs/GOOGLE_GMAIL_OAUTH_GUIDE.md) | Gmail API and OAuth setup |
+| [Project Status](docs/PROJECT_STATUS.md) | Implemented features and known limitations |
