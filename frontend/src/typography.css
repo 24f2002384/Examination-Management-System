@@ -1,0 +1,54 @@
+:root {
+  font-family: "Segoe UI", "Aptos", Arial, sans-serif;
+  font-size: 16px;
+  font-synthesis: none;
+}
+
+body { font-size: 16px; line-height: 1.55; }
+.brand, .side-nav, .drawer-link { font-family: "Trebuchet MS", "Segoe UI", sans-serif; }
+.page-heading h1, .auth-message h1, .auth-card h2, .form-modal h2, .detail-drawer h2 {
+  font-family: Georgia, "Palatino Linotype", serif;
+  letter-spacing: -.35px;
+}
+.panel-heading h3, .section-title h2, .stat-name { font-family: "Trebuchet MS", "Segoe UI", sans-serif; }
+.page-heading h1 { font-size: 30px; }
+.page-heading .muted, .panel-heading p, .muted { font-size: 14px; }
+.sidebar .side-nav a, .drawer-link { font-size: 14px; }
+.breadcrumb, .role-label, .top-actions .btn { font-size: 13px; }
+.stat-value { font-family: "Aptos Display", "Segoe UI", sans-serif; font-size: 30px; }
+.stat-name, .stat-description { font-size: 13px; }
+.panel-heading h3, .section-title h2 { font-size: 16px; }
+.list-row strong, .list-row small, .panel-empty strong, .panel-empty span { font-size: 13px; }
+.dashboard-footer { font-size: 12px; }
+.auth-card label, .profile-form label { font-size: 14px; }
+.auth-card input, .auth-role-select, .profile-form input, .form-control, .form-select { font-size: 15px; }
+.auth-card h2 { font-size: 27px; }
+.auth-card>.muted { font-size: 14px; }
+.security-note, .auth-switch { font-size: 12px; }
+.admin-table { font-size: 13px; }
+.admin-table th { font-size: 11px; }
+.admin-table td { font-size: 13px; }
+.record-toolbar input, .record-toolbar .form-select, .filter-row label { font-size: 14px; }
+.status-pill, .actions-cell .btn, .lifecycle-select { font-size: 12px; }
+.form-modal label { font-size: 14px; }
+.form-modal input, .form-modal textarea, .form-modal select { font-size: 15px; }
+.modal-actions .btn { font-size: 14px; }
+.form-hint, .instruction-actions small { font-size: 12px; line-height: 1.5; }
+.slot-create-form { grid-template-columns: 1.2fr 1fr 1fr .6fr 1.1fr auto; gap: 12px; }
+.slot-create-form .form-control, .slot-create-form .form-select { font-size: 14px; }
+.slot-time-field { display: grid; gap: 6px; align-content: start; color: #52677e; font-size: 13px; font-weight: 650; }
+.time-quick-controls { display: flex; align-items: center; gap: 5px; margin-top: 5px; }
+.time-quick-controls input { width: 68px; min-width: 0; border: 1px solid #dce4ec; border-radius: 6px; padding: 5px 7px; font-size: 13px; }
+.time-quick-controls span { color: #78899b; font-size: 12px; }
+.time-quick-controls .btn { min-width: 34px; font-size: 13px; }
+.instruction-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 7px; }
+.instruction-actions .btn { font-size: 12px; }
+.instruction-actions small { color: #74869a; }
+.slot-choice { font-size: 14px; }
+.score-row strong { font-size: 14px; }
+.score-row small { font-size: 12px; }
+.portal-empty, .portal-empty strong { font-size: 14px; }
+@media (max-width: 800px) {
+  .slot-create-form { grid-template-columns: 1fr 1fr; }
+  .slot-create-form select, .slot-create-form .btn { grid-column: 1 / -1; }
+}

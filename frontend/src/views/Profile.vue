@@ -1,0 +1,9 @@
+<script setup>
+import { onMounted, ref } from 'vue'
+import { auth, notify } from '../state.js'
+import { api } from '../api.js'
+const name = ref(''), email = ref(''), currentPassword = ref(''), loading = ref(true), saving = ref(false)
+onMounted(async () => { try { const result = await api.profile(); name.value = result.user.full_name; email.value = result.user.email } catch (e) { notify(e.message, 'danger') } finally { loading.value = false } })
+async function save() { saving.value = true; try { const r = await api.updateProfile({ full_name: name.value, email: email.value, current_password: currentPassword.value }); auth.user = r.user; currentPassword.value = ''; notify('Your profile was updated') } catch (e) { notify(e.message, 'danger') } finally { saving.value = false } }
+</script>
+<template><div class="page-heading"><div><div class="eyebrow">ACCOUNT</div><h1>Your profile</h1><p class="muted">Manage your personal account details.</p></div></div><div class="profile-card"><div v-if="loading" class="loading-state">Loading profile…</div><template v-else><div class="profile-banner"><div class="profile-avatar">{{ auth.user?.full_name?.[0] }}</div><div><strong>{{ auth.user?.full_name }}</strong><span>{{ auth.user?.role }} account</span></div></div><form class="profile-form" @submit.prevent="save"><div><label>Full name</label><input v-model="name" required minlength="2"></div><div><label>Email address</label><input v-model="email" required type="email"><small class="text-secondary">Enter your current password below to change this email.</small></div><div><label>Current password</label><input v-model="currentPassword" type="password" autocomplete="current-password" placeholder="Only needed when changing email"></div><div><label>Role</label><input :value="auth.user?.role" disabled></div><button class="btn btn-primary" :disabled="saving">{{ saving ? 'Saving…' : 'Save changes' }}</button></form></template></div></template>

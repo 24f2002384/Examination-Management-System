@@ -1,0 +1,4 @@
+<script setup>
+defineProps({ title: { type: String, default: 'Workspace' }, missing: Boolean })
+</script>
+<template><div class="page-heading"><div><div class="eyebrow">{{ missing ? '404 · NOT FOUND' : 'WORKSPACE' }}</div><h1>{{ title }}</h1><p class="muted">{{ missing ? 'The page you’re looking for isn’t available.' : 'This area is ready for the next milestone.' }}</p></div></div><section class="panel-card placeholder-card"><div class="placeholder-symbol">{{ missing ? '⌕' : '✦' }}</div><h3>{{ missing ? 'We couldn’t find that page' : `${title} workspace` }}</h3><p>{{ missing ? 'Check the address or return to your dashboard.' : 'Your navigation is set up. This feature will be implemented in Milestone 2.' }}</p><RouterLink class="btn btn-primary" to="/dashboard">Back to dashboard <span>→</span></RouterLink></section></template>
