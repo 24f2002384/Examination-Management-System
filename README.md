@@ -28,6 +28,8 @@ Make sure the following are installed:
 - Git
 - Redis (required for background and scheduled tasks)
 
+  
+
 For Windows users, Docker Desktop can be used to run Redis.
 
 ### 1. Clone the repository
@@ -204,3 +206,5 @@ Additional guides are available in the `docs` folder:
 | [Troubleshooting](docs/TROUBLESHOOTING.md) | Common errors and their solutions |
 | [Google Gmail OAuth Guide](docs/GOOGLE_GMAIL_OAUTH_GUIDE.md) | Gmail API and OAuth setup |
 | [Project Status](docs/PROJECT_STATUS.md) | Implemented features and known limitations |
+
+VIDEO link:https://drive.google.com/file/d/14ojb9F3EAQrzf92vcc9NeEr2tiKyFiif/view?usp=sharing
